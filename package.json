@@ -1,9 +1,23 @@
 {
   "name": "vue-ssr-test",
   "dependencies": {
+    "@babel/core": "^7.8.4",
+    "babel-loader": "^8.0.6",
     "koa": "^2.11.0",
     "koa-router": "^8.0.8",
     "vue": "^2.6.11",
-    "vue-server-renderer": "^2.6.11"
+    "vue-loader": "^15.9.0",
+    "vue-server-renderer": "^2.6.11",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.6",
+    "webpack-merge": "^4.2.2"
+  },
+  "scripts": {
+    "build:client": "webpack --config build/webpack.client.conf.js",
+    "build:server": "webpack --config build/webpack.server.conf.js",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
   }
 }
