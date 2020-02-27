@@ -9,6 +9,14 @@ const renderer = require('vue-server-renderer').createBundleRenderer(serverBundl
 
 const app = new Koa()
 const router = new Router()
+const path = require('path')
+
+const send = require('koa-send')
+
+// 引入/static/下的文件都通过koa-send转发到dist文件目录下
+router.get('/static/*', async (ctx, next) => {
+  await send(ctx, ctx.path, { root: path.join(__dirname, '..') + '/dist' });
+})
 
 // 第 2 步：路由中间件
 router.get('*', async (ctx, next) => {

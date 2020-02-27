@@ -15,3 +15,7 @@ DOM操作也要禁止，任何只适用于客户端不适用于node的api都要�
 server端打包要使用commonjs,配置VueSSRServerPlugin变成Json
 
 client端：生成manifest
+
+4.数据预取
+
+如果都是静态页面，那就相当于在
