@@ -8,10 +8,18 @@
 <script>
   export default {
     name: 'App',
+    created() {
+      // server端只能执行created和beforeCreate
+      console.log(this.$events.nav);
+    },
     data() {
       return {
         test: 1
       }
+    },
+    // 没有this，传eventBus进去
+    asyncData ({eventBus}) {
+      return eventBus.getNav()
     },
     methods: {
       onClick() {
