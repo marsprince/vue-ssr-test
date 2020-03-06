@@ -10,7 +10,8 @@
     name: 'App',
     created() {
       // server端只能执行created和beforeCreate
-      console.log(this.$events.nav);
+      // console.log(this);
+      console.log(this.$options.created);
     },
     data() {
       return {
