@@ -25,3 +25,5 @@ client端：生成manifest
 如何同步数据：采用vuex或者自己做数据，总体思想是将数据存在某一地方，在created里去取
 
 似乎没什么好办法，只有用vuex或者统一的dataStore
+
+结论: 巨坑
